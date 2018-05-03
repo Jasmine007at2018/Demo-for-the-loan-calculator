@@ -1,4 +1,5 @@
 URL = https://www.autotrader.com/calculators/
 
-ChromeDriver = C://Users//zhaoxia//.nuget//packages//WebDriver.ChromeDriver.win32//2.37.0//content//chromedriver.exe
+ChromeDriver = ./ChromeDriver/chromedriver.exe
+
 ExcelPath = ./TestData/TestData.xlsx

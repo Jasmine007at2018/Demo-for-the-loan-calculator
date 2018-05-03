@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\zhaoxia\AppData\Local\Temp\testng-eclipse--1397237045\testng-customsuite.xml</span>
+                    <span>C:\Users\zhaoxia\AppData\Local\Temp\testng-eclipse--866072240\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testPackage.TestClass" hash-for-method="GetEMI1">GetEMI1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testPackage.TestClass" hash-for-method="NoPrice">NoPrice</a> <!-- method navigator-link -->
@@ -125,11 +130,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="GetEMI1">
+                  </a> <!-- GetEMI1 -->
+                  <span class="method-name">GetEMI1</span>
+                  <em>
+(Test to validate the EMI feature)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="NoPrice">
                   </a> <!-- NoPrice -->
                   <span class="method-name">NoPrice</span>
                   <em>
-(Test to validate the EMI feature)                  </em>
+(Test to validate price reminder when no price is entered)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +151,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\zhaoxia\AppData\Local\Temp\testng-eclipse--1397237045\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\zhaoxia\AppData\Local\Temp\testng-eclipse--866072240\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -146,11 +160,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testPackage.TestClass&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;NoPrice&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testPackage.TestClass --&gt;
+      &lt;class name=&quot;testPackage.TestClass&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,16 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'NoPrice')
+data.setCell(0, 1, 'GetEMI1')
 data.setCell(0, 2, 'testPackage.TestClass')
-data.setCell(0, 3, 4258);
+data.setCell(0, 3, 7453);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'NoPrice')
+data.setCell(1, 2, 'testPackage.TestClass')
+data.setCell(1, 3, 3014);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -214,26 +228,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testPackage.TestClass</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">loginTest</span>
-                <br/>
-                <span class="ignored-method-name">DeleteTMRecordAndValidate</span>
-                <br/>
-                <span class="ignored-method-name">GetEMI1</span>
-                <br/>
-                <span class="ignored-method-name">loginTest2</span>
-                <br/>
-                <span class="ignored-method-name">EditTMRecordAndValidate</span>
-                <br/>
-                <span class="ignored-method-name">CreateTMRecordAndValidate</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -248,20 +245,32 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
+                <span class="method-name">setUpTest(public void testPackage.TestClass.GetEMI1())</span>
+                <span class="method-start">1113 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">GetEMI1</span>
+                <span class="method-start">24857 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=GetEMI1 status=SUCCESS method=TestClass.GetEMI1()[pri:0, instance:testPackage.TestC...)</span>
+                <span class="method-start">32314 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
                 <span class="method-name">setUpTest(public void testPackage.TestClass.NoPrice())</span>
-                <span class="method-start">710 ms</span>
+                <span class="method-start">35214 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">NoPrice</span>
-                <span class="method-start">17186 ms</span>
+                <span class="method-start">47881 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=NoPrice status=SUCCESS method=TestClass.NoPrice()[pri:0, instance:testPackage.TestC...)</span>
-                <span class="method-start">21451 ms</span>
+                <span class="method-start">50898 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">clearUp</span>
-                <span class="method-start">21475 ms</span>
+                <span class="method-start">52837 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

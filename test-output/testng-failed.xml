@@ -6,7 +6,7 @@
       <class name="testPackage.TestClass">
         <methods>
           <include name="testInit"/>
-          <include name="NoPrice"/>
+          <include name="GetEMI1"/>
           <include name="setUpTest"/>
           <include name="clearUp"/>
           <include name="tearDownTest"/>

@@ -66,7 +66,7 @@ public class BaseClass {
 		}
 	
 		//quit the instance of driver
-		//BrowserFactory.driver.quit();
+		BrowserFactory.driver.quit();
 	}
 	
 	@AfterTest
