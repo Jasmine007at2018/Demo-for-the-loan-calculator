@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="23232" started-at="2018-05-03T03:40:44Z" finished-at="2018-05-03T03:41:07Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="23232" started-at="2018-05-03T03:40:44Z" finished-at="2018-05-03T03:41:07Z">
+      <class name="testPackage.TestClass">
+        <test-method status="PASS" signature="testInit()[pri:0, instance:testPackage.TestClass@b7dd107]" name="testInit" is-config="true" duration-ms="664" started-at="2018-05-03T03:40:44Z" finished-at="2018-05-03T03:40:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInit -->
+        <test-method status="PASS" signature="setUpTest(java.lang.reflect.Method)[pri:0, instance:testPackage.TestClass@b7dd107]" name="setUpTest" is-config="true" duration-ms="16476" started-at="2018-05-03T03:40:45Z" finished-at="2018-05-03T03:41:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage.TestClass.NoPrice()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method status="PASS" signature="NoPrice()[pri:0, instance:testPackage.TestClass@b7dd107]" name="NoPrice" duration-ms="4258" started-at="2018-05-03T03:41:01Z" description="Test to validate the EMI feature" finished-at="2018-05-03T03:41:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NoPrice -->
+        <test-method status="PASS" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:testPackage.TestClass@b7dd107]" name="tearDownTest" is-config="true" duration-ms="20" started-at="2018-05-03T03:41:06Z" finished-at="2018-05-03T03:41:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=NoPrice status=SUCCESS method=TestClass.NoPrice()[pri:0, instance:testPackage.TestClass@b7dd107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method status="PASS" signature="clearUp()[pri:0, instance:testPackage.TestClass@b7dd107]" name="clearUp" is-config="true" duration-ms="1741" started-at="2018-05-03T03:41:06Z" finished-at="2018-05-03T03:41:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearUp -->
+      </class> <!-- testPackage.TestClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
