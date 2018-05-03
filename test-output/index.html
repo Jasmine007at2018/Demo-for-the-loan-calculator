@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\zhaoxia\AppData\Local\Temp\testng-eclipse--866072240\testng-customsuite.xml</span>
+                    <span>C:\Users\zhaoxia\AppData\Local\Temp\testng-eclipse--1065362148\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,26 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testPackage.TestClass" hash-for-method="GetEMI1">GetEMI1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testPackage.TestClass" hash-for-method="NoPrice">NoPrice</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,36 +117,81 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testPackage.TestClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GetEMI1">
-                  </a> <!-- GetEMI1 -->
-                  <span class="method-name">GetEMI1</span>
-                  <em>
-(Test to validate the EMI feature)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="NoPrice">
                   </a> <!-- NoPrice -->
                   <span class="method-name">NoPrice</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@class=&apos;cart-item-help-mod contextError&apos;]/div[@class=&apos;cart-item-error-text&apos;]&quot;}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 40 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;zhaoxia-PC&apos;, ip: &apos;10.0.1.147&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7), userDataDir=C:\Users\zhaoxia\AppData\Local\Temp\scoped_dir9524_29621}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: fba8fbcb388745df1ae96b36c661fb7a
+*** Element info: {Using=xpath, value=.//*[@class=&apos;cart-item-help-mod contextError&apos;]/div[@class=&apos;cart-item-error-text&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.getText(Unknown Source)
+	at pagesPackage.HomePage_Cal.validateNoPrice(HomePage_Cal.java:288)
+	at testPackage.TestClass.NoPrice(TestClass.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                   <em>
 (Test to validate price reminder when no price is entered)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\zhaoxia\AppData\Local\Temp\testng-eclipse--866072240\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\zhaoxia\AppData\Local\Temp\testng-eclipse--1065362148\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -160,7 +200,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testPackage.TestClass&quot;/&gt;
+      &lt;class name=&quot;testPackage.TestClass&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;NoPrice&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testPackage.TestClass --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -200,20 +244,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'GetEMI1')
+data.setCell(0, 1, 'NoPrice')
 data.setCell(0, 2, 'testPackage.TestClass')
-data.setCell(0, 3, 7453);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'NoPrice')
-data.setCell(1, 2, 'testPackage.TestClass')
-data.setCell(1, 3, 3014);
+data.setCell(0, 3, 2958);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -228,9 +268,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testPackage.TestClass</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">GetEMI1</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -245,32 +292,22 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpTest(public void testPackage.TestClass.GetEMI1())</span>
-                <span class="method-start">1113 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">GetEMI1</span>
-                <span class="method-start">24857 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownTest([TestResult name=GetEMI1 status=SUCCESS method=TestClass.GetEMI1()[pri:0, instance:testPackage.TestC...)</span>
-                <span class="method-start">32314 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
                 <span class="method-name">setUpTest(public void testPackage.TestClass.NoPrice())</span>
-                <span class="method-start">35214 ms</span>
+                <span class="method-start">784 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">NoPrice</span>
-                <span class="method-start">47881 ms</span>
+                <span class="method-start">15808 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDownTest([TestResult name=NoPrice status=SUCCESS method=TestClass.NoPrice()[pri:0, instance:testPackage.TestC...)</span>
-                <span class="method-start">50898 ms</span>
+                <span class="method-name">tearDownTest([TestResult name=NoPrice status=FAILURE method=TestClass.NoPrice()[pri:0, instance:testPackage.TestC...)</span>
+                <span class="method-start">18778 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">clearUp</span>
-                <span class="method-start">52837 ms</span>
+                <span class="method-start">21425 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

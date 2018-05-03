@@ -54,7 +54,8 @@ public class HomePage_Cal extends BaseClass{
 	static WebElement price_EP;
 				
 	//price reminder when no price entered
-	@FindBy(how = How.XPATH, using = "//div[contains(@class,'cart-item-help-mod contextError')]/div")
+	//@FindBy(how = How.XPATH, using = "/html/body/div[1]/div[3]/div[2]/div[1]/form/div/div[1]/span/div/div/div[1]/div/div[1]/div[3]/div[1]/div/div")
+	@FindBy(how = How.XPATH, using = ".//*[@class='cart-item-help-mod contextError']/div[@class='cart-item-error-text']")
 	static WebElement price_reminder;
 		
 	//calculate button
@@ -255,8 +256,12 @@ public class HomePage_Cal extends BaseClass{
 	
 	public void validateNoPrice()
 	{
+		String NoPriceMsg=null;
+		NoPriceMsg="Please fill out the Vehicle Price field.";
+		
+		
 		try {
-				String NoPriceMsg=null;
+				
 			
 				//click on 24 months
 				BrowserFactory.driver.findElement(By.xpath(".//*[@id='loanCalculatorMonths']/div/span/table/tbody/tr/td[1]/label")).click();
@@ -267,13 +272,10 @@ public class HomePage_Cal extends BaseClass{
 				//click on calculate button
 				calculateBtn.click();
 				
-				NoPriceMsg="Please fill out the Vehicle Price field.";
 				
 				//System.out.println(price_reminder.getText());
-				testLog.log(Status.INFO, "The actual price reminder is :"+price_reminder.getText());
+				testLog.log(Status.INFO, "The actual price reminder is :"+price_reminder.getText());	
 				
-				//validate the reminder when no price entered
-				assertEquals(NoPriceMsg, price_reminder.getText(), "price reminder is not displayed");
 				
 				
 			}catch(Exception e)
@@ -282,6 +284,8 @@ public class HomePage_Cal extends BaseClass{
 		
 		}
 		
+		//validate the reminder when no price entered
+		assertEquals(NoPriceMsg, price_reminder.getText(), "price reminder is not displayed");
 	
 
 	}
