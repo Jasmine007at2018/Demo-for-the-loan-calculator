@@ -22,6 +22,7 @@ import com.google.common.base.Function;
 import helperPackage.BrowserFactory;
 import testPackage.BaseClass;
 import utilityPackage.ExcelDataConfig;
+import utilityPackage.FluenWait;
 
 public class HomePage_Cal extends BaseClass{
 	//BrowserFactory browserObj;	
@@ -99,7 +100,7 @@ public class HomePage_Cal extends BaseClass{
 	static WebElement TotalInterest;
 
 	//Total Loan
-	@FindBy(how = How.XPATH, using = ".//*[@id='j_id_3s-tabsColumn-j_id_43-j_id_44-autoLoanCalculator-j_id_4a-calculatorFormColumn-j_id_bg']/span[2]/span")
+	@FindBy(how = How.XPATH, using = " //*[@class='total-loan calc-text-output']")
 	static WebElement TotalLoan;			
 	
 	
@@ -109,21 +110,21 @@ public class HomePage_Cal extends BaseClass{
 	{
 		String title=null;
 		
-		
+		FluenWait.wait("/html/body/div[4]/div[1]/a/span",30,1);
 		//BrowserFactory.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		try {
-			// Waiting 30 seconds for close button to be present on the page, checking
-			// for its presence once every 1 seconds.
-			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(BrowserFactory.driver)
-		       .withTimeout(30, TimeUnit.SECONDS)
-		       .pollingEvery(1, TimeUnit.SECONDS)
-		       .ignoring(NoSuchElementException.class);
-
-			WebElement close = fluentWait.until(new Function<WebDriver, WebElement>() {
-		    public WebElement apply(WebDriver driver) {
-		    return driver.findElement(By.xpath("/html/body/div[4]/div[1]/a/span"));
-		     }
-		   });
+//			// Waiting 30 seconds for close button to be present on the page, checking
+//			// for its presence once every 1 seconds.
+//			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(BrowserFactory.driver)
+//		       .withTimeout(30, TimeUnit.SECONDS)
+//		       .pollingEvery(1, TimeUnit.SECONDS)
+//		       .ignoring(NoSuchElementException.class);
+//
+//			WebElement close = fluentWait.until(new Function<WebDriver, WebElement>() {
+//		    public WebElement apply(WebDriver driver) {
+//		    return driver.findElement(By.xpath("/html/body/div[4]/div[1]/a/span"));
+//		     }
+//		   });
 				
 		
 		title="Auto Loan Calculator";	
@@ -177,21 +178,22 @@ public class HomePage_Cal extends BaseClass{
 		//click on calculate button
 		calculateBtn.click();
 		
+		FluenWait.wait(".//*[@id='top-of-text']/span[1]",30,1);
 		
 		//BrowserFactory.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		// Waiting 30 seconds for "Estimated Payment" to be present on the page, checking
 		// for its presence once every 1 seconds.
-					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(BrowserFactory.driver)
-				       .withTimeout(30, TimeUnit.SECONDS)
-				       .pollingEvery(1, TimeUnit.SECONDS)
-				       .ignoring(NoSuchElementException.class);
-
-					WebElement EP = fluentWait.until(new Function<WebDriver, WebElement>() {
-				    public WebElement apply(WebDriver driver) {
-				    return driver.findElement(By.xpath(".//*[@id='top-of-text']/span[1]"));
-				     }
-				   });
-		
+//					Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(BrowserFactory.driver)
+//				       .withTimeout(30, TimeUnit.SECONDS)
+//				       .pollingEvery(1, TimeUnit.SECONDS)
+//				       .ignoring(NoSuchElementException.class);
+//
+//					WebElement EP = fluentWait.until(new Function<WebDriver, WebElement>() {
+//				    public WebElement apply(WebDriver driver) {
+//				    return driver.findElement(By.xpath(".//*[@id='top-of-text']/span[1]"));
+//				     }
+//				   });
+//		
 		
 		//validate Estimated Payment is displayed
 		title="Estimated Payment";
@@ -272,6 +274,8 @@ public class HomePage_Cal extends BaseClass{
 				//click on calculate button
 				calculateBtn.click();
 				
+				BrowserFactory.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
 				
 				//System.out.println(price_reminder.getText());
 				testLog.log(Status.INFO, "The actual price reminder is :"+price_reminder.getText());	
